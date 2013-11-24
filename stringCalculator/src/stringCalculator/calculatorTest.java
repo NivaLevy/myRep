@@ -6,15 +6,13 @@ import org.junit.Test;
 
 public class calculatorTest extends calculator {
 
-	/*public String value1;
 	
-	public String value2;*/
 	/*@Test
 	public void test() {
 		fail("Not yet implemented");
 	}*/
 
-	/*@Test
+	@Test
 	public void testEmpty() {
 		int sum=Add("");
 		assertEquals(sum, 0);
@@ -48,12 +46,24 @@ public class calculatorTest extends calculator {
 	public void testAddOffewNumbers() {
 		int sum=Add("1,2,3,4\n5");
 		assertEquals(sum, 15);
-	}*/
+	}
 	
 	@Test
 	public void testAddOffewBigNumbers() {
 		int sum=Add("11,2,3,4\n5");
 		assertEquals(sum, 25);
+	}
+	
+	@Test
+	public void testAddCommaThenEnter() {
+		int sum=Add("11,2,3,4,\n5");
+		assertEquals(sum, 0);
+	}
+	
+	@Test
+	public void testAddEnterThenComma() {
+		int sum=Add("11,2,3,4\n,5");
+		assertEquals(sum, 0);
 	}
 	/*protected void addNegatice() throws Exception {
 		if(((int)value1)<0 || value2<0)

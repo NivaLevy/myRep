@@ -14,12 +14,12 @@ public class calculator {
 	String str="";
 	
 	
-		/*for(int i=0; i<numbers.length()-1; i++){
+		for(int i=0; i<numbers.length()-1; i++){
 			if(numbers.charAt(i)==',' && numbers.charAt(i+1)=='\n')
 				return 0;
 			if(numbers.charAt(i)=='\n' && numbers.charAt(i+1)==',')
 				return 0;
-		}*/
+		}
 	
 		for(int i=0; i<numbers.length(); i++){
 			if(numbers.charAt(i)!=',' && numbers.charAt(i)!='\n'){
@@ -32,15 +32,7 @@ public class calculator {
 				System.out.println("this is i: "+i );
 			}
 		
-		/*	
-			if(i>=(numbers.length()-1)){
-				sum+=number;
-				System.out.println("this is sum: " + sum);
-
-				number=0;
-				str="";
-			}*/
-			
+				
 			else{
 				sum+=number;
 				System.out.println("this is sum: " + sum);	
