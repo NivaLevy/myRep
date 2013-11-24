@@ -44,6 +44,11 @@ public class calculatorTest extends calculator {
 		assertEquals(sum, 3);
 	}
 	
+	@Test
+	public void testAddOffewNumbers() {
+		int sum=Add("1,2,3,4\n5");
+		assertEquals(sum, 15);
+	}
 	/*protected void addNegatice() throws Exception {
 		if(((int)value1)<0 || value2<0)
 			

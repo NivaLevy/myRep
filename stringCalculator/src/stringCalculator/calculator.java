@@ -21,14 +21,18 @@ public class calculator {
 	
 		for(int i=0; i<numbers.length(); i++){
 			if(numbers.charAt(i)!=',' && numbers.charAt(i)!='\n'){
-				str+=numbers.charAt(i);
+				str+=numbers.charAt(i);				
+			
+			
+			
 				number=Integer.parseInt(str);
 				sum+=number;
-		}
-			else{
 				number=0;
 				str="";
 			}
+			
+			
+		
 			
 	}
 		
