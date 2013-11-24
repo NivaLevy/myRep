@@ -65,8 +65,5 @@ public class calculatorTest extends calculator {
 		int sum=Add("11,2,3,4\n,5");
 		assertEquals(sum, 0);
 	}
-	/*protected void addNegatice() throws Exception {
-		if(((int)value1)<0 || value2<0)
-			
-	}*/
+	
 }
