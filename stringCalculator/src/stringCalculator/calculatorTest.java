@@ -26,11 +26,11 @@ public class calculatorTest extends calculator {
 		assertEquals(sum, 1);
 	}
 	
-	@Test
+/*	@Test
 	public void testTwo() {
 		int sum=Add("2");
 		assertEquals(sum, 2);
-	}
+	}*/
 	
 	@Test
 	public void testAddOfTwo() {
