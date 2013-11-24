@@ -26,15 +26,21 @@ public class calculatorTest extends calculator {
 		assertEquals(sum, 1);
 	}
 	
-/*	@Test
+	@Test
 	public void testTwo() {
 		int sum=Add("2");
 		assertEquals(sum, 2);
-	}*/
+	}
 	
 	@Test
-	public void testAddOfTwo() {
+	public void testAddOfTwoWithComma() {
 		int sum=Add("1,2");
+		assertEquals(sum, 3);
+	}
+	
+	@Test
+	public void testAddOfTwoWithEnter() {
+		int sum=Add("1\n2");
 		assertEquals(sum, 3);
 	}
 	
