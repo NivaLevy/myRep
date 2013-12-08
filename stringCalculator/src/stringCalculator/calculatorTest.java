@@ -12,19 +12,23 @@ public class calculatorTest extends calculator {
 		fail("Not yet implemented");
 	}*/
 
-	@Test
+/*	@Test
 	public void testEmpty() {
-		int sum=Add("");
+		int sum=0;
+		try{
+		sum=Add("");}
+		catch(Exception e){}
 		assertEquals(sum, 0);
 	}
 	
 	@Test
 	public void testOne() {
-		int sum=Add("1");
+		int sum=0;
+		sum=Add("1");
 		assertEquals(sum, 1);
 	}
 	
-	@Test
+@Test
 	public void testTwo() {
 		int sum=Add("2");
 		assertEquals(sum, 2);
@@ -65,5 +69,12 @@ public class calculatorTest extends calculator {
 		int sum=Add("11,2,3,4\n,5");
 		assertEquals(sum, 0);
 	}
-	
+	*/
+	@Test
+	public void addNegatice() {
+		int sum=0;
+		try{sum=Add("-11,2,-3,4,5");}
+		catch(Exception e){System.out.println(e.getMessage());}
+		assertEquals(sum, 0);			
+	}
 }

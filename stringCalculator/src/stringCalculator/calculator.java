@@ -9,43 +9,51 @@ public class calculator {
 
 	
 	
-	public int Add(String numbers){
+	public int Add(String numbers) throws Exception
+	{
 	int sum=0, number=0;
-	String str="";
-	
+	//String str="";
+	if(numbers.equals(""))
+		return 0;
 	
 		for(int i=0; i<numbers.length()-1; i++){
 			if(numbers.charAt(i)==',' && numbers.charAt(i+1)=='\n')
 				return 0;
 			if(numbers.charAt(i)=='\n' && numbers.charAt(i+1)==',')
 				return 0;
+						
 		}
 	
-		for(int i=0; i<numbers.length(); i++){
-			if(numbers.charAt(i)!=',' && numbers.charAt(i)!='\n'){
-				str+=numbers.charAt(i);	
-				System.out.println("this is str: " + str);	
-				number=Integer.parseInt(str);
-				if(number>1000)
-					number=0;
-				System.out.println(number);
-				System.out.println("this is i: "+i );
-			}
-		
-				
-			else{
-				sum+=number;
-				System.out.println("this is sum: " + sum);	
-			
+		String Delimeter=",|\n";
+		if(numbers.charAt(0)== '/' && numbers.charAt(1)== '/' && numbers.charAt(3)== '\n' ){
+			Delimeter=numbers.charAt(2)  +"|\n";
+			numbers.substring(4);//begin from charAt(4)
+		}
+	String newNumbers[] =numbers.split(Delimeter);
+	String negStr="";
+	for(int i=0; i<newNumbers.length; i++){
+		//, posStr="";
+		number=Integer.parseInt(newNumbers[i]);
+		if(number <0){
+			negStr+=number + ",";
+		}
+		else{
+			if(number>1000)
 				number=0;
-				str="";
-			}
-			
-	}
-		sum+=number;
-			
+			else
+				sum+=number;// + ",";
+		}
 		
-	return sum;	
+		
 	}
-
+	if(negStr != "")	{
+		
+		throw new Exception("negatives not allowed "+negStr);
+		//return 0;
+	}
+	
+		
+	return (sum);	
+	}
+	
 }
