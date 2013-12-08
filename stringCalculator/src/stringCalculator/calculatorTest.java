@@ -12,7 +12,7 @@ public class calculatorTest extends calculator {
 		fail("Not yet implemented");
 	}*/
 
-/*	@Test
+	@Test
 	public void testEmpty() {
 		int sum=0;
 		try{
@@ -24,52 +24,68 @@ public class calculatorTest extends calculator {
 	@Test
 	public void testOne() {
 		int sum=0;
-		sum=Add("1");
+		try{
+		sum=Add("1");}
+		catch(Exception e){}
 		assertEquals(sum, 1);
 	}
 	
 @Test
 	public void testTwo() {
-		int sum=Add("2");
+		int sum=0;
+		try{sum=Add("2");}
+		catch(Exception e){}
 		assertEquals(sum, 2);
 	}
 	
 	@Test
 	public void testAddOfTwoWithComma() {
-		int sum=Add("1,2");
+		int sum=0;
+		try{sum=Add("1,2");}
+		catch(Exception e){}
 		assertEquals(sum, 3);
 	}
 	
 	@Test
 	public void testAddOfTwoWithEnter() {
-		int sum=Add("1\n2");
+		int sum=0;
+		try{sum=Add("1\n2");}
+		catch(Exception e){}
 		assertEquals(sum, 3);
 	}
 	
 	@Test
 	public void testAddOffewNumbers() {
-		int sum=Add("1,2,3,4\n5");
+		int sum=0;
+		try{sum=Add("1,2,3,4\n5");}
+		catch(Exception e){}
 		assertEquals(sum, 15);
 	}
 	
 	@Test
 	public void testAddOffewBigNumbers() {
-		int sum=Add("11,2,3,4\n5");
+		int sum=0;
+		try{sum=Add("11,2,3,4\n5");}
+		catch(Exception e){}
 		assertEquals(sum, 25);
 	}
 	
 	@Test
 	public void testAddCommaThenEnter() {
-		int sum=Add("11,2,3,4,\n5");
+		int sum=0;
+		try{sum=Add("11,2,3,4,\n5");}
+		catch(Exception e){}
 		assertEquals(sum, 0);
 	}
 	
 	@Test
 	public void testAddEnterThenComma() {
-		int sum=Add("11,2,3,4\n,5");
+		int sum=0;
+		try{sum=Add("11,2,3,4\n,5");}
+		catch(Exception e){}
 		assertEquals(sum, 0);
 	}
-	*/
+	
 	@Test
 	public void addNegatice() {
 		int sum=0;
